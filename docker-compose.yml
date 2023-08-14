@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  web:
+    #--
+    build: ./
+    #restart: always
+    #--
+    #build: ./surl
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./surl/:/usr/src/surl/
+    ports:
+      - 80:8000
+    env_file:
+      - ./.env.dev
+    depends_on:
+      - db
+  db:
+    image: postgres:14
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=surl_u
+      - POSTGRES_PASSWORD=surl_p
+      - POSTGRES_DB=surl_d
+
+volumes:
+  postgres_data:
