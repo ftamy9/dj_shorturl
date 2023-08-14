@@ -1,5 +1,5 @@
 # To run localy you need to create and activate venv and install the requirements.txt.
-# Tp run on docker flow this guid:
+# To run on docker flow this guid:
 sudo docker-compose up -d --build
 sudo docker-compose exec db psql --username=surl_u --dbname=surl_d
 # the password is surl_p
