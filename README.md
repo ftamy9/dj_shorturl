@@ -1,3 +1,8 @@
+# Sample Project – Custom Authentication Token
+I developed a simple authentication token system from scratch to help beginners
+understand the fundamentals of authentication. While not as secure as JWT, the project
+clearly demonstrates key concepts such as token generation and validation.
+#
 # To run localy you need to create and activate venv and install the requirements.txt.
 # To run on docker flow this guid:
 sudo docker-compose up -d --build
@@ -21,3 +26,4 @@ curl -i -X POST -d '{ "url": "http://icanhazip.com" }' -H "Authorization: Basic 
 curl -iL -X GET -H "Authorization: Basic eyJ1c2VyX2lkIjogImZhcmhhbl8xMCIsICJ0aW1lc3RhbXAiOiAiMjAyMy0wOC0xM1QwNzoyMzoyMS4xNDMzNDEiLCAic2lnbiI6ICI5YzFkZWJjZWY4ZjQ5OTUxZDg5ZjJkMjQ5YWQ5YzFjYjI1MDU1ODc2YjNhMzExYTJhN2Q2NDk5ODQxYjBjNWRlZjJkN2MyYWRlZjViYmY5MGZjOTk1ZDA5MGM4MTZlYjIyNDc0MTQzNzUyZDY2ZTk2NjliZmVlMDUzNzU0NGNjYyJ9" -H "Content-Type: application/json" http://SERVER-OR-LOCAL-IP:80/user/signup/e9652e37-c747-495c-b465-fd09d38e66df
 
 ------------------
+
